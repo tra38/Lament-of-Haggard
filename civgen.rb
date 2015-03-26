@@ -1,15 +1,21 @@
 def civilization
 puts "A new civilization has been created!"
 name = "Bob"
-government = ['Tribe', 'Republic', 'Monarchy', 'Empire'].sample
+government = ['Tribe', 'Republic', 'Monarchy', 'Empire', 'Theocracy'].sample
 case government
     when 'Tribe'
-    title = ["The #{name} Tribe", "The #{name} Horde", "The #{name} Clans"].sample
+    title = ["the #{name} Tribe", "the #{name} Horde", "the #{name} Clans"].sample
     when 'Republic'
-    title = ["The Council of #{name}", "The #{name} Senate", "The #{name} Republic"].sample
+    title = ["the Council of #{name}", "the #{name} Senate", "the #{name} Republic"].sample
     when 'Monarchy'
-    title = ["The #{name} Kingdom", "The #{name} Principality", "The Grand Duchy of #{name}"].sample
+    title = ["the #{name} Kingdom", "the #{name} Principality", "the Grand Duchy of #{name}"].sample
     when 'Empire'
-    title = ["The #{name} Empire", "The Holy #{name} Empire", "The Dominion of #{name}"].sample
+    title = ["the #{name} Empire", "the Holy #{name} Empire", "the Dominion of #{name}"].sample
+    when 'Theocracy'
+    title = ["the Archbishopric of #{name}", "the #{name} Sultanate", "the #{name} Temple"].sample
+##    when 'Communist'
+##    title = ["The People\'s Republic of #{name}","The Commune of #{name}","The #{name} Union"].sample
     end
+puts ["Once, #{title} ruled over the known world.", "Long ago, the world was controlled by an ancient regime: #{title}.","According to legend, #{title} once ruled the entire world.","Myth stated that #{title} had a domain that knew no bounds." ].sample
+puts "And then they died. The end."
 end
