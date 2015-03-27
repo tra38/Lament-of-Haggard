@@ -19,3 +19,23 @@ case government
 puts ["Once, #{title} ruled over the known world.", "Long ago, the world was controlled by an ancient regime: #{title}.","According to legend, #{title} once ruled the entire world.","Myth stated that #{title} had a domain that knew no bounds." ].sample
 puts "And then they died. The end."
 end
+
+def historyX
+    event = nil
+    library = false
+    loop do
+        if event == "stop"
+            puts "Okay, let's stop now."
+            break
+            end
+        if library == true
+            puts "A minor work of art is created at our fine location."
+            end
+        if library == false
+            puts "The Grand Library was built to honor the ancestors."
+            library = true
+            end
+    event = ["stop","go", "omega","alpha"].sample
+    puts event
+    end
+end
