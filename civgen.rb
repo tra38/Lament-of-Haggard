@@ -21,24 +21,78 @@ puts "And then they died. The end."
 end
 
 def historyX
-    superarray = ["stop","go", "omega","alpha"]
-    event = nil
+    superarray = ["library", "invention", "war"]
+    event = "nil"
     library = false
+    invention = false
+    war = false
+    art = false
     loop do
-        if event == "stop"
+        case event
+        when "stop"
             puts "Okay, let's stop now."
             break
+        when "library"
+            if library == false
+                puts "The Grand Library was built to honor the ancestors."
+                library = true
+                event = superarray.sample #necessary to prevent the same event re-triggering again
+                puts event
+            else
+            puts "The library is practicing dark arts to honor the ancestors. Those dark arts might doom our society."
+                if rand() > 0.5
+                    puts "The dark arts have succeeded! We are doomed!"
+                    event = "stop"
+                else
+                    puts "Luckily, brave souls burned the library down before anyone got hurt."
+                    library = false
+                    event = superarray.sample
+                    puts event
+                end
             end
-        if library == true
-            puts "A minor work of art is created at our fine location."
-            superarray << "stop"
+        when "invention"
+            if invention == true
+                puts "Our super-invention is demanding human sacrifices."
+                if rand() > 0.5
+                    puts "We cannot sastify our invention's tastes, and the invention killed us all in response."
+                    event = "stop"
+                else
+                    puts "Luckily, brave souls burned the invention down before anyone got hurt." 
+                    invention = false
+                    event = superarray.sample
+                    puts event
+                end
+            elsif library == false
+                puts "We want to buld an invention, but we need the help of our ancestors. Let's honor them!"
+                event = "library"
+            else
+                puts "The ancestors are pleased at our library and gave us an invention."
+                invention = true
+                event = superarray.sample
+                puts event
             end
-        if library == false
-            puts "The Grand Library was built to honor the ancestors."
-            library = true
-            superarray << "omega"
+        when "war"
+            if war == false
+                puts "A rival nation insulted our ancestors. TO WAR!"
+                war = true
+                event = superarray.sample
+                puts event
+            else
+                puts "The enemy is at our gates and want to burn our city down!"
+                    if rand() > 0.5
+                        puts "The enemy defats our forces and burned the city down!"
+                        event = "stop"
+                    else
+                        puts "We sued for peace, paying a heavy tribute. The enemy leaves us alone. The war ends."
+                        war = false
+                        event = superarray.sample
+                        puts event
+                    end
             end
-    event = superarray.sample
-    puts event
+        else
+            puts "This is a filler event."
+            event = superarray.sample
+            puts event
+            end
+        end
     end
-end
