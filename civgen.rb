@@ -21,6 +21,7 @@ puts "And then they died. The end."
 end
 
 def historyX
+    superarray = ["stop","go", "omega","alpha"]
     event = nil
     library = false
     loop do
@@ -30,12 +31,14 @@ def historyX
             end
         if library == true
             puts "A minor work of art is created at our fine location."
+            superarray << "stop"
             end
         if library == false
             puts "The Grand Library was built to honor the ancestors."
             library = true
+            superarray << "omega"
             end
-    event = ["stop","go", "omega","alpha"].sample
+    event = superarray.sample
     puts event
     end
 end
