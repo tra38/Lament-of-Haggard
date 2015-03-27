@@ -2,6 +2,7 @@ COMMENTARY: Empyrea's code was licensed under the GNU General Public License. Th
 including this software, must also be licensed under the GNU General Public License. If you love law, you can
 go ahead and read this license document in full to understand your rights (or the lack thereof).
 
+The legal boilerplate is below:
 
 This program is free software: you can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the Free Software Foundation,
