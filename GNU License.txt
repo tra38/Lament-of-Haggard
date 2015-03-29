@@ -4,6 +4,9 @@ go ahead and read this license document in full to understand your rights (or th
 
 The legal boilerplate is below:
 
+    Lament of Haggard: an improved history generator based on the Empyrea roguelike
+    Copyright (C) 2015,  Tariq R. Ali
+
 This program is free software: you can redistribute it and/or modify it
 under the terms of the GNU General Public License as published by the Free Software Foundation,
 either version 3 of the License, or (at your option) any later version.
