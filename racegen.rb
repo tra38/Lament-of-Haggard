@@ -1,6 +1,7 @@
 def racegen
   species = ['Human','Dwarf','Goblin','Elf','Dinosaur','Elephant','Cat','Dog','Kobold',
-  'Insectoid','Reptilian','Orc','Gnome','Troll','Ogre','Halfling','Fairy','Giant','Unicorn'].sample
+  'Insectoid','Reptilian','Orc','Gnome','Troll','Ogre','Halfling','Fairy','Giant','Unicorn',
+  'Dragon','Hydra'].sample
   color = ['black','brown','blue','green','gray','orange','purple','red','silver','tan','white','yellow'].sample
   case color
     when 'black'
@@ -37,5 +38,11 @@ def racegen
     'straw yellow','sulfur yellow','tawny yellow','puce', 'gold','caramel','flaxen yellow'].sample
   end
   color = color.gsub(/\b(?<!['’`])[a-z]/) { $&.capitalize } #This code is responsible for capitalizing all words
-  color + " "+species
+  if species = "Elf"
+    return color +" Elves"
+  if species = "Hydra"
+    return color +" Hydrae"
+  else
+    return color +" Elves"
+  end
 end
