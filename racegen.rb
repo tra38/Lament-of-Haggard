@@ -38,12 +38,13 @@ def racegen
     'straw yellow','sulfur yellow','tawny yellow','puce', 'gold','caramel','flaxen yellow'].sample
   end
   color = color.gsub(/\b(?<!['’`])[a-z]/) { $&.capitalize } #This code is responsible for capitalizing all words
-  return color+" "species
+  color + " "+species
 end
 
 def plural(racename)
-  racename.sub!("Elf","Elves"); return racename if racename.include?("Elf")
-  racename.sub!("Hydra","Hydrae"); return racename if racename.include?("Hydra")
-  racename.sub!("Fairy","Fairies"); return racename if racename.include?("Fairy")
-  racename + ("s")
+  racename = racename + ("s")
+  racename.sub!("Elfs","Elves")
+  racename.sub!("Hydras","Hydrae")
+  racename.sub!("Fairys","Fairies")
+  return racename 
 end
