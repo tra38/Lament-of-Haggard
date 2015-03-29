@@ -1,7 +1,7 @@
 def racegen
   species = ['Human','Dwarf','Goblin','Elf','Dinosaur','Elephant','Cat','Dog','Kobold',
   'Insectoid','Reptilian','Orc','Gnome','Troll','Ogre','Halfling','Fairy','Giant','Unicorn'].sample
-  color = ['black','brown','blue','green','gray','orange','purple','red','pink','silver','tan','white','yellow'].sample
+  color = ['black','brown','blue','green','gray','orange','purple','red','silver','tan','white','yellow'].sample
   case color
     when 'black'
     color = ['black','charcoal black','coal black','ebon','ebony','jet','onyx','sable'].sample
