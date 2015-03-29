@@ -45,6 +45,6 @@ def racegen
   if species = "Fairy"
     return color+" Fairies"
   else
-    return color +" Elves"
+    return color +" "+species+"s"
   end
 end
