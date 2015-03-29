@@ -11,4 +11,5 @@ Empyrea was originally titled "Cult: Awakening of the Old Ones", however, Haggar
 
 #Additional Inspirations
 --"History X" (http://orfinlir.de/3rdE/historyX.php), written in PHP, allows for a person to generate the history of a civilization based on a series of user-defined paramaters. The source code is available at http://orfinlir.de/3rdE/historyEngine.zip and the Dev Thread is at http://www.enworld.org/forum/showthread.php?74226-History-Generator .
+
 What I Used: The possible events in "History X", as well as the mechanic of previous events affecting the odds of future events
