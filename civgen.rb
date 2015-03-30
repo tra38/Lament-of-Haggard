@@ -24,13 +24,15 @@ puts "And then the #{nameplural} all died from some mysterious disaster. The end
 end
 
 def historyX
-    superarray = ["library", "invention", "war"]
     event = "nil"
+    year = 1500
     library = false
     invention = false
     war = false
     art = false
     loop do
+        year += 5
+        print "#{year}: "
         case event
         when "stop"
             puts "Okay, let's stop now."
@@ -39,17 +41,17 @@ def historyX
             if library == false
                 puts "The Grand Library was built to honor the ancestors."
                 library = true
-                event = superarray.sample #necessary to prevent the same event re-triggering again
+                event = newevent #necessary to prevent the same event re-triggering again
                 puts event
             else
-            puts "The library is practicing dark arts to honor the ancestors. Those dark arts might doom our society."
+            print "The library is practicing dark arts to honor the ancestors. Those dark arts might doom our society."
                 if rand() > 0.5
                     puts "The dark arts have succeeded! We are doomed!"
                     event = "stop"
                 else
                     puts "Luckily, brave souls burned the library down before anyone got hurt."
                     library = false
-                    event = superarray.sample
+                    event = newevent
                     puts event
                 end
             end
@@ -62,7 +64,7 @@ def historyX
                 else
                     puts "Luckily, brave souls burned the invention down before anyone got hurt." 
                     invention = false
-                    event = superarray.sample
+                    newevent
                     puts event
                 end
             elsif library == false
@@ -71,31 +73,39 @@ def historyX
             else
                 puts "The ancestors are pleased at our library and gave us an invention."
                 invention = true
-                event = superarray.sample
+                event = newevent
                 puts event
             end
         when "war"
             if war == false
                 puts "A rival nation insulted our ancestors. TO WAR!"
                 war = true
-                event = superarray.sample
+                event = newevent
                 puts event
             else
                 puts "The enemy is at our gates and want to burn our city down!"
-                    if rand() > 0.5
+                    if invention == true
+                        puts "Our invention ate the enemy, saving us! But now it has a taste of human flesh..."
+                        event = "invention"
+                    elsif rand() > 0.5
                         puts "The enemy defats our forces and burned the city down!"
                         event = "stop"
                     else
                         puts "We sued for peace, paying a heavy tribute. The enemy leaves us alone. The war ends."
                         war = false
-                        event = superarray.sample
+                        event = newevent
                         puts event
                     end
             end
         else
             puts "This is a filler event."
-            event = superarray.sample
+            event = newevent
             puts event
             end
         end
     end
+
+def newevent
+    superarray = ["library", "invention", "war"]
+    superarray.sample
+end
