@@ -1,23 +1,26 @@
+require 'racegen'
+
 def civilization
 puts "A new civilization has been created!"
-name = "Bob"
+name = racegen
+nameplural = plural(name) 
 government = ['Tribe', 'Republic', 'Monarchy', 'Empire', 'Theocracy'].sample
 case government
     when 'Tribe'
     title = ["the #{name} Tribe", "the #{name} Horde", "the #{name} Clans"].sample
     when 'Republic'
-    title = ["the Council of #{name}", "the #{name} Senate", "the #{name} Republic"].sample
+    title = ["the Council of #{nameplural}", "the #{name} Senate", "the #{name} Republic"].sample
     when 'Monarchy'
-    title = ["the #{name} Kingdom", "the #{name} Principality", "the Grand Duchy of #{name}"].sample
+    title = ["the #{name} Kingdoms", "the #{name} Principalities", "the Grand Duchies of the #{nameplural}"].sample
     when 'Empire'
     title = ["the #{name} Empire", "the Holy #{name} Empire", "the Dominion of #{name}"].sample
     when 'Theocracy'
-    title = ["the Archbishopric of #{name}", "the #{name} Sultanate", "the #{name} Temple"].sample
+    title = ["the #{name} Archbishopric", "the #{name} Sultanate", "the #{name} Temple"].sample
 ##    when 'Communist'
 ##    title = ["The People\'s Republic of #{name}","The Commune of #{name}","The #{name} Union"].sample
     end
 puts ["Once, #{title} ruled over the known world.", "Long ago, the world was controlled by an ancient regime: #{title}.","According to legend, #{title} once ruled the entire world.","Myth stated that #{title} had a domain that knew no bounds." ].sample
-puts "And then they died. The end."
+puts "And then the #{nameplural} all died from some mysterious disaster. The end."
 end
 
 def historyX
