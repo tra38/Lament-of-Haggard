@@ -44,7 +44,7 @@ def historyX
                 event = newevent #necessary to prevent the same event re-triggering again
                 puts event
             else
-            print "The library is practicing dark arts to honor the ancestors. Those dark arts might doom our society."
+            print "The library is practicing dark arts to honor the ancestors. Those dark arts might doom our society. "
                 if rand() > 0.5
                     puts "The dark arts have succeeded! We are doomed!"
                     event = "stop"
@@ -57,7 +57,7 @@ def historyX
             end
         when "invention"
             if invention == true
-                puts "Our super-invention is demanding human sacrifices."
+                puts "Our super-invention is demanding human sacrifices. "
                 if rand() > 0.5
                     puts "We cannot sastify our invention's tastes, and the invention killed us all in response."
                     event = "stop"
@@ -83,7 +83,7 @@ def historyX
                 event = newevent
                 puts event
             else
-                puts "The enemy is at our gates and want to burn our city down!"
+                puts "The enemy is at our gates and want to burn our city down! "
                     if invention == true
                         puts "Our invention ate the enemy, saving us! But now it has a taste of human flesh..."
                         event = "invention"
