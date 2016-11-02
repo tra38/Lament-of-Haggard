@@ -1,9 +1,9 @@
-require 'racegen'
+require_relative 'racegen'
 
 def civilization
 puts "A new civilization has been created!"
 name = racegen
-nameplural = plural(name) 
+nameplural = plural(name)
 government = ['Tribe', 'Republic', 'Monarchy', 'Empire', 'Theocracy'].sample
 case government
     when 'Tribe'
@@ -64,7 +64,7 @@ def historyX
                     puts "We cannot sastify our invention's tastes, and the invention killed us all in response."
                     event = "stop"
                 else
-                    puts "Luckily, brave souls burned the invention down before anyone got hurt." 
+                    puts "Luckily, brave souls burned the invention down before anyone got hurt."
                     invention = false
                     newevent
                     puts event
@@ -81,7 +81,7 @@ def historyX
         when "war"
             if war == false
                 enemy ||= plural(racegen)
-                puts "We encountered the #{enemy}. They were "+["genocidial madmen","murderous barbarians","uncivilized brutes","incredibly wealthy"].sample+" and so we had to fight against them." 
+                puts "We encountered the #{enemy}. They were "+["genocidial madmen","murderous barbarians","uncivilized brutes","incredibly wealthy"].sample+" and so we had to fight against them."
                 war = true
                 event = newevent
                 puts event
@@ -112,3 +112,5 @@ def newevent
     superarray = ["library", "invention", "war"]
     superarray.sample
 end
+
+civilization
